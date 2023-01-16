@@ -8,7 +8,7 @@ import dash_bootstrap_components as dbc  # pip install dash-bootstrap-components
 import plotly.express as px              # pip install plotly
 import pandas as pd                      # pip install pandas
 from datetime import date
-import calendar
+#import calendar
 from wordcloud import WordCloud          # pip install wordcloud
 
 
@@ -26,7 +26,7 @@ options = dict(loop=True, autoplay=True, rendererSettings=dict(preserveAspectRat
 df_cnt = pd.read_csv("Connections.csv")
 df_cnt["Connected On"] = pd.to_datetime(df_cnt["Connected On"])
 df_cnt["month"] = df_cnt["Connected On"].dt.month
-df_cnt['month'] = df_cnt['month'].apply(lambda x: calendar.month_abbr[x])
+#df_cnt['month'] = df_cnt['month'].apply(lambda x: calendar.month_abbr[x])
 
 #df_invite = pd.read_csv("https://raw.githubusercontent.com/Coding-with-Adam/Dash-by-Plotly/master/Analytic_Web_Apps/Linkedin_Analysis/Invitations.csv")
 df_invite = pd.read_csv("Invitations.csv")
